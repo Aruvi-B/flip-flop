@@ -1,19 +1,10 @@
-
 {
-  "name": "Custom Development Container",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils:1": {}
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "ms-vscode.cpptools",              // C/C++ support
-        "vsciot-vscode.vscode-arduino",    // Arduino support
-        "platformio.platformio-ide",       // PlatformIO support
-        "wokwi.wokwi-vscode",              // Wokwi Simulator
-        "ms-python.python"                 // Python support, if needed
-      ]
-    }
-  }
+  "name": "Custom Codespace",
+  "extensions": [
+    "vsciot-vscode.vscode-arduino",
+    "platformio.platformio-ide",
+    "ms-vscode.cpptools",
+    "wokwi.wokwi-vscode"
+  ],
+  "postCreateCommand": "echo 'Extensions installed successfully!'"
 }
