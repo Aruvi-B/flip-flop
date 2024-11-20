@@ -1,18 +1,20 @@
 {
-  "name": "Arduino and Wokwi Setup",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "name": "ESP32 Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/python:3.9",
+  "postCreateCommand": "pip install platformio && arduino-cli core install esp32:esp32",
   "customizations": {
     "vscode": {
       "extensions": [
-        "vsciot-vscode.vscode-arduino",
         "platformio.platformio-ide",
+        "vsciot-vscode.vscode-arduino",
         "ms-vscode.cpptools",
         "wokwi.wokwi-vscode"
-      ]
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "workbench.colorTheme": "Visual Studio Dark",
+        "editor.formatOnSave": true
+      }
     }
-  },
-  "postCreateCommand": "arduino-cli core update-index && arduino-cli core install arduino:avr",
-  "features": {}
+  }
 }
