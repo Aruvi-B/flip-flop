@@ -1,10 +1,18 @@
 {
-  "name": "Custom Codespace",
-  "extensions": [
-    "vsciot-vscode.vscode-arduino",
-    "platformio.platformio-ide",
-    "ms-vscode.cpptools",
-    "wokwi.wokwi-vscode"
-  ],
-  "postCreateCommand": "echo 'Extensions installed successfully!'"
+  "name": "Arduino and Wokwi Setup",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vsciot-vscode.vscode-arduino",
+        "platformio.platformio-ide",
+        "ms-vscode.cpptools",
+        "wokwi.wokwi-vscode"
+      ]
+    }
+  },
+  "postCreateCommand": "arduino-cli core update-index && arduino-cli core install arduino:avr",
+  "features": {}
 }
