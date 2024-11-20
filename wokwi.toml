@@ -1,0 +1,20 @@
+toml
+[wokwi]
+version = 1
+elf = ".pio/build/uno/firmware.elf"
+firmware = ".pio/build/uno/firmware.hex"
+
+[[peripherals]]
+id = "led_red"
+type = "led"
+pin = 13  # Pin connected to the red LED
+
+[[peripherals]]
+id = "led_yellow"
+type = "led"
+pin = 12  # Pin connected to the yellow LED
+
+[[peripherals]]
+id = "led_green"
+type = "led"
+pin = 11  # Pin connected to the green LED
